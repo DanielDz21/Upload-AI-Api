@@ -11,13 +11,13 @@ Content-Type: multipart/form-data; boundary=NextContent
 Content-Disposition: form-data; name="file"; filename="example.mp3"
 Content-Type: audio/mpeg
 
-./example.mp3
+< ./example.mp3
 --NextContent--
 
 ###
 
 # @name create-transcription
-POST http://localhost:3333/videos/31894304-68d7-41fd-9b58-562bdeefa6dc/transcription
+POST http://localhost:3333/videos/3a9b59c1-5160-4d7d-8bdb-038ae6bbc62b/transcription
 Content-Type: application/json
 
 {
@@ -31,7 +31,7 @@ POST http://localhost:3333/ai/complete
 Content-Type: application/json
 
 {
-    "videoId": "31894304-68d7-41fd-9b58-562bdeefa6dc",
+    "videoId": "3a9b59c1-5160-4d7d-8bdb-038ae6bbc62b",
     "temperature": 0.5,
     "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
 }
